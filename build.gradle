@@ -92,7 +92,7 @@ task testJar(type: Test, dependsOn: [jar, testClasses]) {
 check.dependsOn test, testJar
 
 dependencies {
-  implementation 'org.jetbrains.pty4j:purejavacomm:0.0.11.1'
+  implementation files('libs/purejavacomm.jar')
   implementation 'org.jetbrains:annotations:16.0.2'
   implementation 'com.google.guava:guava:25.1-jre'
   implementation "log4j:log4j:1.2.14"
