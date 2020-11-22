@@ -64,6 +64,9 @@ public class PtyUtil {
     if (osType == Platform.FREEBSD) {
       return "freebsd/" + arch;
     }
+    if (osType == Platform.OPENBSD) {
+      return "openbsd/" + arch;
+    }
     throw new IllegalStateException("Pty4J has no native support for " +
       "OS name: " + System.getProperty("os.name") + " (JNA OS type: " + Platform.getOSType() + ")" +
       ", arch: " + System.getProperty("os.arch") + " (JNA arch: " + Platform.ARCH + ")");
